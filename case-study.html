@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#f5ead8"/><circle cx="100" cy="100" r="56" fill="#7a8a5e"/><text x="100" y="116" font-family="Georgia,serif" font-size="38" fill="#f5ead8" text-anchor="middle">CS</text></svg></template>
+<helmet>
+<link rel="stylesheet" href="_ds/organic-c81f4327-4bf3-43c5-b28a-3e3b79b40725/styles.css">
+<script src="_ds/organic-c81f4327-4bf3-43c5-b28a-3e3b79b40725/_ds_bundle.js"></script>
+<meta name="ext-resource-dependency" content="img/zenfire/hero.jpg">
+<meta name="ext-resource-dependency" content="img/zenfire/nfpa-forms.jpg">
+<meta name="ext-resource-dependency" content="img/zenfire/laptop-map.jpg">
+<meta name="ext-resource-dependency" content="img/aimate/marketing-hero.jpg">
+<meta name="ext-resource-dependency" content="img/aimate/marketing-stats.jpg">
+<meta name="ext-resource-dependency" content="img/aimate/business-analysis.png">
+<meta name="ext-resource-dependency" content="img/aimate/prompt-visibility.png">
+<meta name="ext-resource-dependency" content="img/aimate/chatbot-widget.png">
+<meta name="ext-resource-dependency" content="img/clara/hero.jpg">
+<meta name="ext-resource-dependency" content="img/clara/integrations.jpg">
+<meta name="ext-resource-dependency" content="img/clara/orbital-logos.jpg">
+<meta name="ext-resource-dependency" content="img/clara/solutions-carousel.jpg">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; overflow-x: hidden; }
+  a:hover { color: var(--color-accent-700); }
+  @keyframes om-rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  @keyframes om-drift { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(36px,-26px) scale(1.06); } }
+</style>
+</helmet>
+<div style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden">
+  <div style="position:absolute;top:-16vh;right:-10vw;width:48vw;height:48vw;border-radius:999px;background:radial-gradient(circle at 40% 40%, var(--color-accent-200), transparent 70%);animation:om-drift 28s ease-in-out infinite"></div>
+</div>
+<div ref="{{ progressRef }}" style="position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--color-accent);z-index:60"></div>
+
+<div style="position:relative;z-index:1;font-family:var(--font-body);color:var(--color-text)">
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:14px clamp(20px,5vw,72px);backdrop-filter:blur(14px);background:color-mix(in srgb, var(--color-bg) 78%, transparent);border-bottom:1px solid var(--color-divider)">
+    <a href="index.html" style="font-family:var(--font-heading);font-size:16px;color:var(--color-text);text-decoration:none;display:flex;align-items:center;gap:10px" style-hover="color:var(--color-accent-700)">← All work</a>
+    <a class="btn btn-primary" href="index.html#contact" style="border-radius:999px;padding:9px 20px;text-decoration:none">Let's talk</a>
+  </nav>
+
+  <header style="max-width:1100px;margin:0 auto;padding:clamp(44px,7vw,96px) clamp(20px,5vw,72px) clamp(28px,4vw,56px)">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-6);animation:om-rise .7s ease both">
+      <span class="tag tag-accent">{{ cs.role }}</span>
+      <span class="tag tag-outline">{{ cs.client }}</span>
+    </div>
+    <h1 style="font-size:clamp(36px,6vw,80px);line-height:1.02;letter-spacing:-0.03em;margin:0;animation:om-rise .8s .1s ease both">{{ cs.headline }}</h1>
+    <p style="font-size:clamp(16px,1.4vw,20px);opacity:.75;max-width:52ch;margin:var(--space-6) 0 0;animation:om-rise .8s .2s ease both">{{ cs.summary }}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);margin-top:clamp(28px,4vw,52px);padding-top:var(--space-6);border-top:1px solid var(--color-divider);animation:om-rise .8s .3s ease both">
+      <div><div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin-bottom:6px">Role</div><div style="font-family:var(--font-heading);font-size:17px">{{ cs.role }}</div></div>
+      <div><div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin-bottom:6px">Tools</div><div style="font-family:var(--font-heading);font-size:17px">{{ cs.tools }}</div></div>
+      <sc-if value="{{ cs.hasLink }}" hint-placeholder-val="{{ true }}">
+        <div><div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin-bottom:6px">Live</div><a href="{{ cs.linkHref }}" target="_blank" rel="noopener" style="font-family:var(--font-heading);font-size:17px">{{ cs.linkLabel }} ↗</a></div>
+      </sc-if>
+    </div>
+  </header>
+
+  <main style="max-width:1100px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(60px,8vw,120px);display:flex;flex-direction:column;gap:clamp(26px,3.4vw,48px)">
+    <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="4">
+      <div>
+        <sc-if value="{{ b.isSub }}" hint-placeholder-val="{{ true }}">
+          <h2 style="font-size:clamp(26px,3.2vw,42px);line-height:1.08;letter-spacing:-0.02em;margin:var(--space-6) 0 var(--space-3);max-width:26ch">{{ b.text }}</h2>
+        </sc-if>
+        <sc-if value="{{ b.isKicker }}" hint-placeholder-val="{{ true }}">
+          <h6 style="color:var(--color-accent-700);margin:0">{{ b.text }}</h6>
+        </sc-if>
+        <sc-if value="{{ b.isPara }}" hint-placeholder-val="{{ true }}">
+          <p style="font-size:17px;line-height:1.65;max-width:70ch;margin:0">{{ b.text }}</p>
+        </sc-if>
+        <sc-if value="{{ b.isQuote }}" hint-placeholder-val="{{ true }}">
+          <blockquote style="margin:0;background:var(--color-accent-2-200);border-radius:var(--radius-lg);padding:clamp(24px,3vw,44px)">
+            <div style="font-family:var(--font-heading);font-size:clamp(22px,2.6vw,34px);line-height:1.2">"{{ b.text }}"</div>
+            <div style="font-size:14px;font-weight:600;opacity:.7;margin-top:var(--space-4)">— {{ b.attrib }}</div>
+          </blockquote>
+        </sc-if>
+        <sc-if value="{{ b.isNote }}" hint-placeholder-val="{{ true }}">
+          <div style="border-left:none;background:var(--color-neutral-200);border-radius:var(--radius-md);padding:var(--space-4) var(--space-6);font-size:14px;opacity:.8;max-width:70ch">{{ b.text }}</div>
+        </sc-if>
+        <sc-if value="{{ b.isList }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ b.items }}" as="it" hint-placeholder-count="5">
+              <span class="tag tag-neutral">{{ it }}</span>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isStats }}" hint-placeholder-val="{{ true }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(14px,2vw,24px)">
+            <sc-for list="{{ b.items }}" as="st" hint-placeholder-count="2">
+              <div data-reveal="1" style="opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-accent-700);color:var(--color-accent-100);border-radius:var(--radius-lg);padding:var(--space-6)">
+                <div style="font-family:var(--font-heading);font-size:clamp(34px,4vw,52px);line-height:1">{{ st.value }}</div>
+                <div style="font-size:13.5px;opacity:.85;margin-top:8px">{{ st.label }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ b.isImg }}" hint-placeholder-val="{{ true }}">
+          <figure data-reveal="1" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)">
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md);background:var(--color-surface)">
+              <img class="washed" src="{{ b.src }}" alt="{{ b.cap }}" style="width:100%">
+            </div>
+            <figcaption style="margin-top:10px;font-size:12.5px">{{ b.cap }}</figcaption>
+          </figure>
+        </sc-if>
+        <sc-if value="{{ b.isPending }}" hint-placeholder-val="{{ true }}">
+          <div data-reveal="1" style="opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1);border-radius:var(--radius-lg);background:var(--color-surface);border:1px dashed var(--color-neutral-400);padding:clamp(40px,6vw,84px) var(--space-6);text-align:center">
+            <div style="font-family:var(--font-heading);font-size:20px;margin-bottom:8px">{{ b.text }}</div>
+            <div style="font-size:13.5px;opacity:.6">Drop the screen exports in here and this becomes the case study's visual spine.</div>
+          </div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </main>
+
+  <footer style="background:var(--color-accent-900);color:var(--color-accent-100);border-radius:var(--radius-lg) var(--radius-lg) 0 0">
+    <div style="max-width:1100px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(20px,5vw,72px) clamp(28px,4vw,48px)">
+      <h6 style="color:var(--color-accent-300);margin-bottom:var(--space-4)">Next</h6>
+      <a href="{{ nextHref }}" style="color:var(--color-accent-100);text-decoration:none;display:block" style-hover="color:var(--color-accent-300)">
+        <h2 style="font-size:clamp(30px,5vw,64px);line-height:1.04;letter-spacing:-0.02em;margin:0">{{ nextTitle }} →</h2>
+      </a>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);font-size:13px;opacity:.6;border-top:1px solid color-mix(in srgb, #fff 16%, transparent);padding-top:var(--space-4);margin-top:clamp(36px,5vw,72px)">
+        <a href="mailto:taditi555@gmail.com" style="color:var(--color-accent-100)">taditi555@gmail.com</a>
+        <span>Aditi Tiwari — Senior Product Designer</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const P = (text) => ({ isPara: true, text });
+const SUB = (text) => ({ isSub: true, text });
+const K = (text) => ({ isKicker: true, text });
+const NOTE = (text) => ({ isNote: true, text });
+const IMG = (src, cap) => ({ isImg: true, src, cap });
+const STATS = (items) => ({ isStats: true, items });
+const QUOTE = (text, attrib) => ({ isQuote: true, text, attrib });
+const LIST = (items) => ({ isList: true, items });
+const PENDING = (text) => ({ isPending: true, text });
+
+const CASES = {
+  'zenfire': {
+    title: 'ZenFire',
+    client: 'ZenTrades.AI',
+    role: 'UI/UX Design',
+    tools: 'Figma · Adobe CS · HTML5 · CSS3',
+    link: { href: 'https://zentrades.pro/zenfire', label: 'zentrades.pro/zenfire' },
+    headline: 'A cluttered marketing site was undermining a serious product',
+    summary: 'ZenFire sells fire-inspection software to a compliance-driven, highly technical audience. I was the sole designer on the site, end to end, shipped on WordPress.',
+    blocks: [
+      IMG('img/zenfire/hero.jpg', 'Redesigned ZenFire homepage hero'),
+      K('Problem'), SUB('Length without hierarchy, and nothing a technical buyer could trust'),
+      P('The previous site was too long, filled with irrelevant or off-topic content, visually inconsistent, and dated. Fire protection and inspection businesses buy on compliance detail and credibility — neither of which the page gave them. WordPress brought real implementation constraints I had to design around rather than ignore.'),
+      K('Process'), SUB('Restructured around how a buyer actually decides'),
+      P('Benefits, then proof, then features, then objections (FAQ) — instead of a long undifferentiated scroll. I cut inconsistent, off-topic sections and unified the visual system across the page.'),
+      P('Real product screens replaced generic stock imagery: NFPA inspection forms and the live scheduling map, so the page shows the software doing the technical job the buyer is evaluating.'),
+      IMG('img/zenfire/nfpa-forms.jpg', 'NFPA inspection forms shown as real product surface, not stock imagery'),
+      IMG('img/zenfire/laptop-map.jpg', 'Live scheduling and dispatch map used as proof on the marketing page'),
+      K('Outcome'),
+      STATS([{ value: '+20%', label: 'monthly traffic conversion' }, { value: '+45%', label: 'click-through rate' }]),
+      NOTE('Measured via Google Search Console, Google Analytics and Microsoft Clarity — attributed to a clearer, more usable, more engaging redesign.')
+    ]
+  },
+  'aimate': {
+    title: 'Aimate',
+    client: 'Independent product',
+    role: 'Product Design',
+    tools: 'Figma · FigJam · Miro · Adobe CS',
+    link: { href: 'https://hiaimate.com', label: 'hiaimate.com' },
+    headline: 'Designing my own product, from PRD to shipped SaaS',
+    summary: 'Founder & Product Designer — a full B2B SaaS product: multi-role IA, dense analytics UI, onboarding, and a 6-provider AI data model.',
+    blocks: [
+      P('Aimate (formerly Hummingbird AI) shows businesses exactly how they are described when customers ask AI engines — ChatGPT, Gemini, Claude, Perplexity, Copilot and Google AI Overviews — about their services. I own product design end to end: onboarding, business analysis, competitor tracking, prompt visibility, citations, GEO visibility via Search Console, and an AI-generated action-plan tool.'),
+      P('Built with an explicit no-fabrication principle carried into the UI itself — disconnected data sources show as N/A rather than being filled with mock data.'),
+      SUB('Selling an evidence-first product with an evidence-first site'),
+      IMG('img/aimate/marketing-hero.jpg', 'hiaimate.com — leading with the product promise rather than generic SaaS messaging'),
+      P('The marketing site leads with the core promise — seeing exactly how AI engines describe and rank a brand. Real usage signals (prompts tracked per week, response snapshots collected, data-source coverage) sit directly on the page, so the scale and the honesty are legible before signup.'),
+      IMG('img/aimate/marketing-stats.jpg', 'Real usage signals surfaced on the marketing site'),
+      SUB('A dense analytics product, made legible'),
+      IMG('img/aimate/business-analysis.png', 'Business Analysis — AI-generated company intelligence and positioning, the first thing a new workspace sees'),
+      IMG('img/aimate/prompt-visibility.png', 'Prompt visibility — every tracked prompt scored across five chart types, drilling into a per-engine response comparison'),
+      SUB('One product, many surfaces'),
+      P('Beyond visibility tracking, Aimate ships an embeddable on-site chatbot — install snippet, live visitor preview, and granular controls for tone, lead capture, business hours and AI-reply limits. The same design system and IA patterns carry across a very different job-to-be-done, from analytics-heavy dashboards to a lightweight configuration surface, designed for non-technical business owners to self-serve without engineering help.'),
+      IMG('img/aimate/chatbot-widget.png', 'Chatbot module — configuration, install snippet and live preview'),
+      NOTE('Kept deliberately qualitative: no outcome metrics are claimed for Aimate yet.')
+    ]
+  },
+  'clara': {
+    title: 'Clara AI',
+    client: 'Clara AI',
+    role: 'UI/UX Design',
+    tools: 'Figma · Adobe CS · HTML5 · CSS3',
+    link: { href: 'https://justclara.ai', label: 'justclara.ai' },
+    headline: 'An AI operating layer for trade businesses',
+    summary: 'Three coordinated agents — Field Intelligence, Front Office call answering, and Payments — for HVAC, fire protection, roofing, electrical and plumbing businesses.',
+    blocks: [
+      IMG('img/clara/hero.jpg', 'Clara AI homepage hero'),
+      P('Clara AI positions itself as an operating layer rather than another point tool. I designed the marketing site: the hero, the integration ecosystem, a filterable solutions carousel by role / industry / challenge, and video case studies.'),
+      IMG('img/clara/integrations.jpg', 'Integration ecosystem — the products a trade business already runs on'),
+      IMG('img/clara/orbital-logos.jpg', 'Orbital integration treatment'),
+      IMG('img/clara/solutions-carousel.jpg', 'Solutions carousel, filterable by role, industry and challenge'),
+      NOTE('Role scope and measured outcomes for this project are still being confirmed with the client team.')
+    ]
+  },
+  'goal-dashboard': {
+    title: 'Goal Dashboard',
+    client: 'Centricity WealthTech',
+    role: 'UX Research',
+    tools: 'Figma · FigJam · UserTesting · Miro',
+    headline: 'Replacing spreadsheets with a real tool',
+    summary: 'Relationship managers and portfolio coaches had no dedicated tool for client goal-setting — they used Excel for calculation and record-keeping.',
+    blocks: [
+      K('Process'), SUB('A full goal dashboard, from discovery to usability testing'),
+      P('Discovery, research, IA, UI design, wireframes and usability testing, with two personas and a competitive analysis behind it. The visual system — Montserrat and a focused palette — was built to feel approachable rather than clinical, because RMs use it to walk clients through investing for the first time.'),
+      QUOTE('This feels like Duolingo for investing — I actually get it.', 'usability testing participant'),
+      K('Outcome'),
+      STATS([
+        { value: '45%', label: 'completed their first goal setup within 7 minutes of signup' },
+        { value: '+30%', label: 'SIP contributions using the "What If" tool' },
+        { value: '4.6★', label: 'average rating in early beta (in-app survey)' }
+      ]),
+      PENDING('Screens pending')
+    ]
+  },
+  'invictus': {
+    title: 'Invictus',
+    client: 'Centricity WealthTech',
+    role: 'UI Design',
+    tools: 'Figma · FigJam · UserTesting',
+    headline: 'Democratizing investment intelligence for single family offices',
+    summary: "Centricity's insights engine for single family office wealth-management clients — redesigned for usability, clarity and decision-making support.",
+    blocks: [
+      P('Five pain points drove the redesign: information overload, poor colors and visuals, non-intuitive navigation, lack of customization, and a weak mobile experience.'),
+      P('I delivered a full personalized portfolio dashboard in both light and dark theme, on a Montserrat / purple-pink-navy-gold visual system, following a Research → Design → Publish process.'),
+      LIST(['Information overload', 'Poor colors & visuals', 'Non-intuitive navigation', 'No customization', 'Weak mobile experience']),
+      PENDING('Screens pending')
+    ]
+  },
+  'onedigital': {
+    title: 'OneDigital',
+    client: 'Centricity WealthTech',
+    role: 'UI Design',
+    tools: 'Figma · FigJam · Miro · UserTesting',
+    headline: "Centricity's main platform, end to end",
+    summary: "OneDigital is Centricity WealthTech's flagship project — the platform tying together their broader product suite.",
+    blocks: [
+      P('Built from user stories and empathy mapping through to multiple personas, design drivers and full app architecture.'),
+      P('Delivered login and sign-up, user profile, asset-allocation views, a portfolio-manager dashboard, a client dashboard and a product marketplace — on a cream / gold / black visual system in Montserrat.'),
+      LIST(['Login & sign-up', 'User profile', 'Asset allocation', 'Portfolio-manager dashboard', 'Client dashboard', 'Product marketplace']),
+      PENDING('Screens pending')
+    ]
+  },
+  'aif-calculator': {
+    title: 'AIF Calculator',
+    client: 'Centricity WealthTech',
+    role: 'UX Research',
+    tools: 'Figma · UserTesting · FigJam',
+    headline: 'Making two dense calculators actually usable',
+    summary: 'Fixed Deposit and Alternate Investment Funds — two calculators with very different inputs, outputs and user expectations.',
+    blocks: [
+      P('I ran separate competitive analysis, personas and design drivers for FD vs. AIF, then unified them into one dark-themed, Montserrat-based mobile visual system.'),
+      P('Usability testing directly compared how users reasoned through FD vs. AIF tasks, surfacing where a shared pattern worked and where the two genuinely needed to diverge.'),
+      PENDING('Screens pending')
+    ]
+  },
+  'zentrades-ds': {
+    title: 'ZenTrades Design System',
+    client: 'ZenTrades.AI',
+    role: 'Design Systems',
+    tools: 'Figma · FigJam · HTML5 · CSS3',
+    headline: 'The system that keeps a growing platform consistent',
+    summary: 'As ZenTrades expanded into a multi-dashboard field-service platform, I took ownership of the design system and the core dashboard suite everything else is built on.',
+    blocks: [
+      P('The system spans 15+ product dashboards — analytics, ticketing, estimates, time cards, scheduling & dispatch, inventory, job costing, and role-based views for owners and service managers. It extends to mobile and tablet apps, plus ZenFire-specific mobile screens for NFPA forms, inspections and billing.'),
+      SUB('Component library'),
+      LIST(['Typography', 'Colors', 'Buttons', 'Badges & Chips', 'Checkbox / Radio', 'Toggle', 'Input', 'Tooltip', 'Loader', 'Navbar', 'Cards', 'Tabs', 'Dropdown', 'Stepper', 'Pagination', 'Alerts & Pop-ups', 'Breadcrumbs', '40+ icon categories']),
+      PENDING('Component library screens pending')
+    ]
+  }
+};
+
+const ORDER = ['zenfire', 'aimate', 'clara', 'goal-dashboard', 'invictus', 'onedigital', 'aif-calculator', 'zentrades-ds'];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.progressRef = React.createRef();
+  }
+
+  currentId() {
+    let id = null;
+    try { id = new URLSearchParams(window.location.search).get('id'); } catch (e) {}
+    return CASES[id] ? id : 'zenfire';
+  }
+
+  renderVals() {
+    const id = this.currentId();
+    const cs = CASES[id];
+    const next = ORDER[(ORDER.indexOf(id) + 1) % ORDER.length];
+    return {
+      progressRef: this.progressRef,
+      cs: {
+        client: cs.client, role: cs.role, tools: cs.tools,
+        headline: cs.headline, summary: cs.summary,
+        hasLink: !!cs.link,
+        linkHref: cs.link ? cs.link.href : '#',
+        linkLabel: cs.link ? cs.link.label : ''
+      },
+      blocks: cs.blocks,
+      nextHref: 'case-study.html?id=' + next,
+      nextTitle: CASES[next].title
+    };
+  }
+
+  componentDidMount() {
+    document.title = 'Aditi Tiwari — ' + CASES[this.currentId()].title;
+    const reveal = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { reveal(en.target); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+    this._io = io;
+    const seen = new WeakSet();
+    const attach = () => document.querySelectorAll('[data-reveal]').forEach((el) => {
+      if (seen.has(el)) return;
+      seen.add(el);
+      io.observe(el);
+    });
+    attach();
+    this._scan = setInterval(attach, 250);
+    this._stop = setTimeout(() => clearInterval(this._scan), 6000);
+    this._t = setTimeout(() => document.querySelectorAll('[data-reveal]').forEach(reveal), 6500);
+
+    let raf = null;
+    this._onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = null;
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        if (this.progressRef.current) {
+          this.progressRef.current.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, (window.scrollY || 0) / h) : 0) + ')';
+        }
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._t) clearTimeout(this._t);
+    if (this._stop) clearTimeout(this._stop);
+    if (this._scan) clearInterval(this._scan);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+}
+</script>
+</body>
+</html>

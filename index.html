@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#f5ead8"/><circle cx="100" cy="100" r="56" fill="#c67139"/><text x="100" y="118" font-family="Georgia,serif" font-size="46" fill="#f5ead8" text-anchor="middle">AT</text></svg></template>
+<helmet>
+<link rel="stylesheet" href="_ds/organic-c81f4327-4bf3-43c5-b28a-3e3b79b40725/styles.css">
+<script src="_ds/organic-c81f4327-4bf3-43c5-b28a-3e3b79b40725/_ds_bundle.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; overflow-x: hidden; }
+  a:hover { color: var(--color-accent-700); }
+  @keyframes om-rise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+  @keyframes om-float { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-18px) rotate(var(--r,0deg)); } }
+  @keyframes om-drift { 0%,100% { transform: translate(0,0) scale(1); } 33% { transform: translate(40px,-30px) scale(1.06); } 66% { transform: translate(-30px,20px) scale(0.96); } }
+  @keyframes om-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes om-spin { to { transform: rotate(360deg); } }
+  @keyframes om-blink { 0%,100% { opacity: 1; } 50% { opacity: 0.15; } }
+</style>
+</helmet>
+<div style="position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden">
+  <div style="position:absolute;top:-14vh;right:-12vw;width:52vw;height:52vw;border-radius:999px;background:radial-gradient(circle at 35% 35%, var(--color-accent-200), transparent 70%);animation:om-drift 26s ease-in-out infinite"></div>
+  <div style="position:absolute;bottom:-20vh;left:-14vw;width:46vw;height:46vw;border-radius:999px;background:radial-gradient(circle at 60% 40%, var(--color-accent-2-200), transparent 70%);animation:om-drift 34s ease-in-out infinite reverse"></div>
+</div>
+<div ref="{{ progressRef }}" style="position:fixed;top:0;left:0;height:3px;width:100%;transform:scaleX(0);transform-origin:0 50%;background:var(--color-accent);z-index:60"></div>
+
+<div style="position:relative;z-index:1;font-family:var(--font-body);color:var(--color-text)">
+
+  <nav style="position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4);padding:14px clamp(20px,5vw,72px);backdrop-filter:blur(14px);background:color-mix(in srgb, var(--color-bg) 78%, transparent);border-bottom:1px solid var(--color-divider)">
+    <a href="#top" style="font-family:var(--font-heading);font-size:19px;color:var(--color-text);text-decoration:none;display:flex;align-items:center;gap:10px">
+      <span style="width:26px;height:26px;border-radius:999px;background:var(--color-accent);display:inline-block;animation:om-float 6s ease-in-out infinite"></span>
+      Aditi Tiwari
+    </a>
+    <div style="display:flex;align-items:center;gap:clamp(10px,2vw,28px);font-size:14px;font-weight:600">
+      <a href="#work" style="color:var(--color-text);text-decoration:none;opacity:.72" style-hover="opacity:1;color:var(--color-accent-700)">Work</a>
+      <a href="#process" style="color:var(--color-text);text-decoration:none;opacity:.72" style-hover="opacity:1;color:var(--color-accent-700)">Process</a>
+      <a href="#skills" style="color:var(--color-text);text-decoration:none;opacity:.72" style-hover="opacity:1;color:var(--color-accent-700)">Skills</a>
+      <a href="#experience" style="color:var(--color-text);text-decoration:none;opacity:.72" style-hover="opacity:1;color:var(--color-accent-700)">Experience</a>
+      <a class="btn btn-primary" href="#contact" style="border-radius:999px;padding:9px 20px;text-decoration:none">Let's talk</a>
+    </div>
+  </nav>
+
+  <header id="top" style="padding:clamp(52px,9vw,120px) clamp(20px,5vw,72px) clamp(40px,6vw,80px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,5vw,64px);align-items:center;max-width:1440px;margin:0 auto">
+    <div>
+      <div style="display:inline-flex;align-items:center;gap:9px;padding:7px 16px 7px 12px;border-radius:999px;background:var(--color-accent-2-200);font-size:13px;font-weight:600;color:var(--color-accent-2-800);animation:om-rise .7s ease both">
+        <span style="width:8px;height:8px;border-radius:999px;background:var(--color-accent-2-700);animation:om-blink 2s ease-in-out infinite"></span>
+        Open to international roles · relocation &amp; visa sponsorship
+      </div>
+      <h1 style="font-size:clamp(46px,7.6vw,104px);line-height:0.98;margin:var(--space-4) 0 0;letter-spacing:-0.03em">
+        <span style="display:block;animation:om-rise .8s .08s ease both">Senior</span>
+        <span style="display:block;animation:om-rise .8s .18s ease both">Product</span>
+        <span style="display:block;color:var(--color-accent-700);animation:om-rise .8s .28s ease both">Designer</span>
+      </h1>
+      <p style="font-size:clamp(17px,1.5vw,21px);max-width:46ch;margin:var(--space-6) 0 0;line-height:1.5;animation:om-rise .8s .38s ease both">
+        Enterprise SaaS, fintech &amp; AI products. Case studies in dashboards, design systems, and AI-native products — built where clarity is the actual design problem.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--space-6);animation:om-rise .8s .48s ease both">
+        <a class="btn btn-primary" href="#work" style="border-radius:999px;padding:13px 26px;font-size:15px;text-decoration:none">See the work</a>
+        <a class="btn btn-secondary" href="mailto:taditi555@gmail.com" style="border-radius:999px;padding:13px 26px;font-size:15px;text-decoration:none;color:var(--color-text)">taditi555@gmail.com</a>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,54px);margin-top:clamp(32px,5vw,60px);animation:om-rise .8s .58s ease both">
+        <div>
+          <div style="font-family:var(--font-heading);font-size:clamp(30px,3.4vw,44px);line-height:1;color:var(--color-accent-700)"><span data-count="5">0</span>+</div>
+          <div style="font-size:13px;font-weight:600;opacity:.6;margin-top:6px">Years designing</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-heading);font-size:clamp(30px,3.4vw,44px);line-height:1;color:var(--color-accent-700)"><span data-count="15">0</span>+</div>
+          <div style="font-size:13px;font-weight:600;opacity:.6;margin-top:6px">Product dashboards</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-heading);font-size:clamp(30px,3.4vw,44px);line-height:1;color:var(--color-accent-700)"><span data-count="23">0</span></div>
+          <div style="font-size:13px;font-weight:600;opacity:.6;margin-top:6px">Usability studies run</div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;height:clamp(340px,44vw,540px)" data-parallax="-0.06">
+      <div style="position:absolute;top:6%;right:2%;width:74%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);--r:2.2deg;animation:om-float 9s ease-in-out infinite">
+        <img class="washed" src="img/aimate/business-analysis.png" alt="Aimate business analysis dashboard" style="width:100%">
+      </div>
+      <div style="position:absolute;bottom:4%;left:0;width:58%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-lg);--r:-3deg;animation:om-float 11s .6s ease-in-out infinite">
+        <img class="washed" src="img/zenfire/nfpa-forms.jpg" alt="ZenFire NFPA inspection forms" style="width:100%">
+      </div>
+      <div style="position:absolute;top:-2%;left:6%;width:104px;height:104px;border-radius:999px;background:var(--color-accent);opacity:.9;display:grid;place-items:center;color:var(--color-bg);font-family:var(--font-heading);font-size:13px;text-align:center;line-height:1.15;--r:0deg;animation:om-float 7s .3s ease-in-out infinite">Enterprise<br>SaaS</div>
+    </div>
+  </header>
+
+  <div style="overflow:hidden;border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:16px 0;background:color-mix(in srgb, var(--color-surface) 60%, transparent)">
+    <div style="display:flex;width:max-content;gap:0;animation:om-marquee 34s linear infinite">
+      <div style="display:flex;gap:44px;padding-right:44px;font-family:var(--font-heading);font-size:19px;white-space:nowrap;color:var(--color-accent-800)">
+        <span>Enterprise dashboards</span><span style="opacity:.4">◆</span><span>Design systems at scale</span><span style="opacity:.4">◆</span><span>AI / AEO product design</span><span style="opacity:.4">◆</span><span>0→1 ownership</span><span style="opacity:.4">◆</span><span>Data-dense UI</span><span style="opacity:.4">◆</span>
+      </div>
+      <div aria-hidden="true" style="display:flex;gap:44px;padding-right:44px;font-family:var(--font-heading);font-size:19px;white-space:nowrap;color:var(--color-accent-800)">
+        <span>Enterprise dashboards</span><span style="opacity:.4">◆</span><span>Design systems at scale</span><span style="opacity:.4">◆</span><span>AI / AEO product design</span><span style="opacity:.4">◆</span><span>0→1 ownership</span><span style="opacity:.4">◆</span><span>Data-dense UI</span><span style="opacity:.4">◆</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="about" style="max-width:1180px;margin:0 auto;padding:clamp(64px,9vw,140px) clamp(20px,5vw,72px)">
+    <h6 data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);color:var(--color-accent-700);margin-bottom:var(--space-4)">About</h6>
+    <div style="display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(28px,6vw,80px);align-items:start">
+      <h2 data-reveal="1" data-delay="60" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:clamp(30px,4.2vw,56px);line-height:1.06;letter-spacing:-0.02em;margin:0">I design the tools people use to run their business every day</h2>
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <p data-reveal="1" data-delay="120" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:17px;line-height:1.62;margin:0">Currently designing enterprise SaaS dashboards for <strong>Centricity WealthTech</strong> and <strong>ZenTrades.AI</strong> — investment platforms, field-service software, and the design system that holds it all together.</p>
+        <p data-reveal="1" data-delay="180" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:17px;line-height:1.62;margin:0">Independently designing and shipping <strong>Aimate</strong>, my own AI-visibility SaaS product, end to end.</p>
+        <p data-reveal="1" data-delay="240" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:17px;line-height:1.62;margin:0">I work across the full process — discovery and research, information architecture, UI design, usability testing — on products dense enough that clarity is the actual design problem.</p>
+        <div data-reveal="1" data-delay="300" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);display:flex;flex-wrap:wrap;gap:9px;margin-top:var(--space-2)">
+          <span class="tag tag-accent">Enterprise dashboards &amp; data-dense UI</span>
+          <span class="tag tag-accent-2">Design systems at scale</span>
+          <span class="tag tag-outline">AI / AEO product design</span>
+          <span class="tag tag-neutral">0→1 product design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(64px,9vw,130px)">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:var(--space-6);flex-wrap:wrap;margin-bottom:clamp(28px,4vw,56px)">
+      <div>
+        <h6 data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);color:var(--color-accent-700);margin-bottom:var(--space-3)">Selected work</h6>
+        <h2 data-reveal="1" data-delay="60" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:clamp(30px,4vw,52px);letter-spacing:-0.02em;margin:0">Eight case studies</h2>
+      </div>
+      <p style="font-size:14px;opacity:.6;max-width:32ch;margin:0">Each opens a full case study — problem, process, and what changed.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:clamp(18px,2.4vw,32px)">
+
+      <a data-reveal="1" href="case-study.html?id=zenfire" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);grid-column:span 2;text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-surface);box-shadow:var(--shadow-sm);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:var(--space-6)">
+          <div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-4)"><span class="tag tag-accent">UI/UX Design</span><span class="tag tag-outline">ZenTrades.AI</span></div>
+            <h3 style="font-size:clamp(24px,2.5vw,34px);line-height:1.1;margin:0 0 var(--space-3)">A cluttered marketing site was undermining a serious product</h3>
+            <p style="font-size:15px;opacity:.7;margin:0">Restructured ZenFire's site around how a compliance-driven buyer actually decides — benefits, proof, features, objections.</p>
+          </div>
+          <div style="display:flex;gap:var(--space-6);align-items:flex-end">
+            <div><div style="font-family:var(--font-heading);font-size:34px;line-height:1;color:var(--color-accent-700)">+20%</div><div style="font-size:12px;font-weight:600;opacity:.6">traffic conversion</div></div>
+            <div><div style="font-family:var(--font-heading);font-size:34px;line-height:1;color:var(--color-accent-700)">+45%</div><div style="font-size:12px;font-weight:600;opacity:.6">click-through rate</div></div>
+          </div>
+        </div>
+        <div style="overflow:hidden;min-height:280px"><img class="washed" src="img/zenfire/hero.jpg" alt="ZenFire site hero" style="width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.06)"></div>
+      </a>
+
+      <a data-reveal="1" data-delay="80" href="case-study.html?id=aimate" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-accent-2-200);box-shadow:var(--shadow-sm);display:flex;flex-direction:column" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="padding:clamp(22px,2.4vw,32px) clamp(22px,2.4vw,32px) var(--space-4)">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-4)"><span class="tag tag-accent-2">Product Design</span><span class="tag tag-outline">Independent · 0→1</span></div>
+          <h3 style="font-size:clamp(21px,2vw,28px);line-height:1.12;margin:0 0 var(--space-2)">Designing my own product, from PRD to shipped SaaS</h3>
+          <p style="font-size:14px;opacity:.72;margin:0">Aimate — how AI engines describe your brand. Multi-role IA, dense analytics, a 6-provider data model.</p>
+        </div>
+        <div style="margin-top:auto;overflow:hidden"><img class="washed" src="img/aimate/prompt-visibility.png" alt="Aimate prompt visibility" style="width:100%;transition:transform 1s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.05)"></div>
+      </a>
+
+      <a data-reveal="1" data-delay="160" href="case-study.html?id=clara" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-surface);box-shadow:var(--shadow-sm);display:flex;flex-direction:column" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="padding:clamp(22px,2.4vw,32px) clamp(22px,2.4vw,32px) var(--space-4)">
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-4)"><span class="tag tag-accent">UI/UX Design</span><span class="tag tag-outline">Clara AI</span></div>
+          <h3 style="font-size:clamp(21px,2vw,28px);line-height:1.12;margin:0 0 var(--space-2)">An AI operating layer for trade businesses</h3>
+          <p style="font-size:14px;opacity:.72;margin:0">Three coordinated agents, an integration ecosystem, and a filterable solutions carousel.</p>
+        </div>
+        <div style="margin-top:auto;overflow:hidden"><img class="washed" src="img/clara/orbital-logos.jpg" alt="Clara AI integrations" style="width:100%;transition:transform 1s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.05)"></div>
+      </a>
+
+      <a data-reveal="1" href="case-study.html?id=goal-dashboard" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);padding:clamp(24px,2.6vw,36px);background:var(--color-accent-700);color:var(--color-accent-100);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-6);min-height:300px" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag" style="background:color-mix(in srgb, #fff 22%, transparent);color:var(--color-accent-100)">UX Research</span><span class="tag" style="background:transparent;border:1px solid color-mix(in srgb, #fff 40%, transparent);color:var(--color-accent-100)">Centricity WealthTech</span></div>
+        <h3 style="font-size:clamp(23px,2.2vw,32px);line-height:1.1;margin:0">Replacing spreadsheets with a real tool</h3>
+        <p style="font-size:14px;opacity:.85;margin:0">Goal dashboard for relationship managers — two personas, competitive analysis, usability testing.</p>
+        <div style="margin-top:auto;display:flex;gap:var(--space-6);flex-wrap:wrap">
+          <div><div style="font-family:var(--font-heading);font-size:30px;line-height:1">45%</div><div style="font-size:12px;opacity:.8">first goal &lt; 7 min</div></div>
+          <div><div style="font-family:var(--font-heading);font-size:30px;line-height:1">+30%</div><div style="font-size:12px;opacity:.8">SIP contributions</div></div>
+          <div><div style="font-family:var(--font-heading);font-size:30px;line-height:1">4.6★</div><div style="font-size:12px;opacity:.8">beta rating</div></div>
+        </div>
+      </a>
+
+      <a data-reveal="1" data-delay="80" href="case-study.html?id=invictus" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);padding:clamp(24px,2.6vw,36px);background:var(--color-surface);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-4);min-height:300px" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag tag-accent">UI Design</span><span class="tag tag-outline">Centricity WealthTech</span></div>
+        <h3 style="font-size:clamp(23px,2.2vw,32px);line-height:1.1;margin:0">Democratizing investment intelligence for single family offices</h3>
+        <p style="font-size:14px;opacity:.72;margin:0">Five pain points drove the redesign of Centricity's insights engine — light and dark theme throughout.</p>
+        <div style="margin-top:auto;display:flex;gap:7px">
+          <span style="width:26px;height:26px;border-radius:999px;background:#5b3a8e"></span><span style="width:26px;height:26px;border-radius:999px;background:#d6529c"></span><span style="width:26px;height:26px;border-radius:999px;background:#1c2352"></span><span style="width:26px;height:26px;border-radius:999px;background:#c9a227"></span>
+        </div>
+      </a>
+
+      <a data-reveal="1" data-delay="160" href="case-study.html?id=onedigital" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);padding:clamp(24px,2.6vw,36px);background:var(--color-neutral-200);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-4);min-height:300px" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag tag-accent">UI Design</span><span class="tag tag-outline">Flagship platform</span></div>
+        <h3 style="font-size:clamp(23px,2.2vw,32px);line-height:1.1;margin:0">Centricity's main platform, end to end</h3>
+        <p style="font-size:14px;opacity:.72;margin:0">OneDigital — user stories to full app architecture: profiles, asset allocation, two dashboards, a product marketplace.</p>
+        <div style="margin-top:auto;font-family:var(--font-heading);font-size:13px;color:var(--color-accent-700)">Read case study →</div>
+      </a>
+
+      <a data-reveal="1" href="case-study.html?id=aif-calculator" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);padding:clamp(24px,2.6vw,36px);background:var(--color-surface);box-shadow:var(--shadow-sm);display:flex;flex-direction:column;gap:var(--space-4);min-height:280px" style-hover="box-shadow:var(--shadow-lg)">
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="tag tag-accent">UX Research</span><span class="tag tag-outline">Mobile</span></div>
+        <h3 style="font-size:clamp(23px,2.2vw,32px);line-height:1.1;margin:0">Making two dense calculators actually usable</h3>
+        <p style="font-size:14px;opacity:.72;margin:0">Fixed Deposit vs. AIF — separate research, one unified dark mobile system.</p>
+        <div style="margin-top:auto;font-family:var(--font-heading);font-size:13px;color:var(--color-accent-700)">Read case study →</div>
+      </a>
+
+      <a data-reveal="1" data-delay="80" href="case-study.html?id=zentrades-ds" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);grid-column:span 2;text-decoration:none;color:var(--color-text);border-radius:var(--radius-lg);padding:clamp(24px,3vw,44px);background:var(--color-accent-2-700);color:var(--color-accent-2-100);box-shadow:var(--shadow-sm);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,44px);align-items:center" style-hover="box-shadow:var(--shadow-lg)">
+        <div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:var(--space-4)"><span class="tag" style="background:color-mix(in srgb, #fff 22%, transparent);color:var(--color-accent-2-100)">Design Systems</span><span class="tag" style="background:transparent;border:1px solid color-mix(in srgb, #fff 40%, transparent);color:var(--color-accent-2-100)">15+ dashboards</span></div>
+          <h3 style="font-size:clamp(24px,2.5vw,34px);line-height:1.1;margin:0 0 var(--space-3)">The system that keeps a growing platform consistent</h3>
+          <p style="font-size:15px;opacity:.85;margin:0">Ownership of ZenTrades' design system and core dashboard suite — analytics, ticketing, scheduling &amp; dispatch, inventory, job costing, plus mobile and tablet.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:7px">
+          <span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Typography</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Colors</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Buttons</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Badges &amp; Chips</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Checkbox / Radio</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Toggle</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Input</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Tooltip</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Loader</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Navbar</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Cards</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Tabs</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Dropdown</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Stepper</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Pagination</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Alerts &amp; Pop-ups</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">Breadcrumbs</span><span class="tag" style="background:color-mix(in srgb, #fff 16%, transparent);color:var(--color-accent-2-100)">40+ icon categories</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="process" style="background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(60px,8vw,120px) clamp(20px,5vw,72px)">
+      <h6 data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);color:var(--color-accent-700);margin-bottom:var(--space-3)">Approach</h6>
+      <h2 data-reveal="1" data-delay="60" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:clamp(30px,4vw,52px);letter-spacing:-0.02em;margin:0 0 clamp(28px,4vw,56px);max-width:22ch">One process, repeated across every project</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(16px,2vw,26px)">
+        <div data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6);transition:transform .4s ease" style-hover="transform:translateY(-6px)">
+          <div style="width:52px;height:52px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading);font-size:21px;margin-bottom:var(--space-4)">1</div>
+          <h4 style="margin:0 0 var(--space-2)">Discovery</h4>
+          <p style="font-size:14px;opacity:.72;margin:0">Understand the business problem and who is actually blocked by it.</p>
+        </div>
+        <div data-reveal="1" data-delay="70" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6)" style-hover="transform:translateY(-6px)">
+          <div style="width:52px;height:52px;border-radius:999px;background:var(--color-accent-2-600);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading);font-size:21px;margin-bottom:var(--space-4)">2</div>
+          <h4 style="margin:0 0 var(--space-2)">Research</h4>
+          <p style="font-size:14px;opacity:.72;margin:0">Competitive analysis, personas, and design drivers grounded in real user constraints.</p>
+        </div>
+        <div data-reveal="1" data-delay="140" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6)" style-hover="transform:translateY(-6px)">
+          <div style="width:52px;height:52px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading);font-size:21px;margin-bottom:var(--space-4)">3</div>
+          <h4 style="margin:0 0 var(--space-2)">IA</h4>
+          <p style="font-size:14px;opacity:.72;margin:0">Structure before pixels — flows, architecture, and content hierarchy.</p>
+        </div>
+        <div data-reveal="1" data-delay="210" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6)" style-hover="transform:translateY(-6px)">
+          <div style="width:52px;height:52px;border-radius:999px;background:var(--color-accent-2-600);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading);font-size:21px;margin-bottom:var(--space-4)">4</div>
+          <h4 style="margin:0 0 var(--space-2)">UI Design</h4>
+          <p style="font-size:14px;opacity:.72;margin:0">Visual system, high-fidelity screens, and interaction detail.</p>
+        </div>
+        <div data-reveal="1" data-delay="280" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6)" style-hover="transform:translateY(-6px)">
+          <div style="width:52px;height:52px;border-radius:999px;background:var(--color-accent);color:var(--color-bg);display:grid;place-items:center;font-family:var(--font-heading);font-size:21px;margin-bottom:var(--space-4)">5</div>
+          <h4 style="margin:0 0 var(--space-2)">Testing</h4>
+          <p style="font-size:14px;opacity:.72;margin:0">Usability testing and real feedback loops before and after ship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" style="max-width:1180px;margin:0 auto;padding:clamp(60px,8vw,120px) clamp(20px,5vw,72px)">
+    <h6 data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);color:var(--color-accent-700);margin-bottom:var(--space-3)">Skills &amp; software</h6>
+    <h2 data-reveal="1" data-delay="60" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:clamp(30px,4vw,52px);letter-spacing:-0.02em;margin:0 0 clamp(28px,4vw,52px)">What I bring to a team</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(18px,2.4vw,32px)">
+      <div data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+        <h4 style="margin:0 0 var(--space-4);color:var(--color-accent-700)">Design</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span class="tag tag-neutral">Figma (advanced)</span><span class="tag tag-neutral">Design systems</span><span class="tag tag-neutral">Interaction &amp; motion</span><span class="tag tag-neutral">Prototyping</span><span class="tag tag-neutral">Accessibility standards</span><span class="tag tag-neutral">Responsive &amp; mobile-first</span></div>
+      </div>
+      <div data-reveal="1" data-delay="80" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+        <h4 style="margin:0 0 var(--space-4);color:var(--color-accent-700)">Process</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span class="tag tag-neutral">Discovery &amp; research</span><span class="tag tag-neutral">Information architecture</span><span class="tag tag-neutral">Usability testing</span><span class="tag tag-neutral">Competitive analysis</span><span class="tag tag-neutral">Personas &amp; journey mapping</span><span class="tag tag-neutral">Developer handoff</span></div>
+      </div>
+      <div data-reveal="1" data-delay="160" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)">
+        <h4 style="margin:0 0 var(--space-4);color:var(--color-accent-700)">Product</h4>
+        <div style="display:flex;flex-wrap:wrap;gap:8px"><span class="tag tag-neutral">0→1 product design</span><span class="tag tag-neutral">Enterprise / B2B SaaS</span><span class="tag tag-neutral">Fintech dashboards</span><span class="tag tag-neutral">AI-native product design</span><span class="tag tag-neutral">Prompt engineering</span><span class="tag tag-neutral">SaaS product strategy</span></div>
+      </div>
+    </div>
+    <div data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);margin-top:clamp(28px,4vw,52px);padding:var(--space-6);border-radius:var(--radius-lg);background:var(--color-accent-100);display:flex;flex-wrap:wrap;gap:var(--space-8)">
+      <div><div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:8px">Design &amp; prototyping</div><div style="font-family:var(--font-heading);font-size:17px">Figma · FigJam · Miro · Adobe Creative Suite</div></div>
+      <div><div style="font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.6;margin-bottom:8px">Research &amp; handoff</div><div style="font-family:var(--font-heading);font-size:17px">UserTesting · HTML5 · CSS3 · React design systems</div></div>
+    </div>
+  </section>
+
+  <section id="beyond" style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,72px) clamp(60px,8vw,120px)">
+    <h6 data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);color:var(--color-accent-700);margin-bottom:var(--space-3)">Beyond UI/UX design</h6>
+    <h2 data-reveal="1" data-delay="60" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:clamp(30px,4vw,52px);letter-spacing:-0.02em;margin:0 0 clamp(24px,3.5vw,48px)">Other ways I've contributed</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2.4vw,32px)">
+      <div data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-surface);border-radius:var(--radius-lg);padding:var(--space-6)">
+        <h4 style="margin:0 0 var(--space-2)">Logo design</h4>
+        <p style="font-size:14px;opacity:.72;margin:0 0 var(--space-4)">Brand marks for both Aimate and ZenTrades.AI.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <figure><div style="background:var(--color-bg);border-radius:var(--radius-md);padding:var(--space-4);display:grid;place-items:center;min-height:84px"><img src="img/logos/aimate-logo.png" alt="Aimate logo" style="max-height:44px;width:auto"></div><figcaption>Aimate</figcaption></figure>
+          <figure><div style="background:var(--color-bg);border-radius:var(--radius-md);padding:var(--space-4);display:grid;place-items:center;min-height:84px"><img src="img/logos/zentrades-logo.png" alt="ZenTrades.AI logo" style="max-height:44px;width:auto"></div><figcaption>ZenTrades.AI</figcaption></figure>
+        </div>
+      </div>
+      <div data-reveal="1" data-delay="80" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-surface);border-radius:var(--radius-lg);padding:var(--space-6)">
+        <h4 style="margin:0 0 var(--space-2)">Social media</h4>
+        <p style="font-size:14px;opacity:.72;margin:0 0 var(--space-4)">Content for ZenTrades.AI and Centricity WealthTech — product updates, feature spotlights, campaign creative, on each company's visual system.</p>
+        <figure><div style="border-radius:var(--radius-md);overflow:hidden"><img class="washed" src="img/social/john-owens-social-ad.jpg" alt="Client social ad" style="width:100%"></div><figcaption>Sample — client social ad (John Owens Services)</figcaption></figure>
+      </div>
+      <div data-reveal="1" data-delay="160" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-accent-2-200);border-radius:var(--radius-lg);padding:var(--space-6);display:flex;flex-direction:column">
+        <h4 style="margin:0 0 var(--space-2)">Company events</h4>
+        <p style="font-size:14px;opacity:.75;margin:0">Planned and ran internal company events at ZenTrades.AI and Centricity WealthTech, end to end — alongside core design work rather than as a separate role.</p>
+        <div style="margin-top:auto;padding-top:var(--space-6);display:flex;gap:10px"><span style="width:14px;height:14px;border-radius:999px;background:var(--color-accent-2-700)"></span><span style="width:14px;height:14px;border-radius:999px;background:var(--color-accent-600)"></span><span style="width:14px;height:14px;border-radius:999px;background:var(--color-accent-2-500)"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" style="background:var(--color-surface);border-top:1px solid var(--color-divider)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(60px,8vw,120px) clamp(20px,5vw,72px)">
+      <h6 data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);color:var(--color-accent-700);margin-bottom:var(--space-3)">Experience</h6>
+      <h2 data-reveal="1" data-delay="60" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);font-size:clamp(30px,4vw,52px);letter-spacing:-0.02em;margin:0 0 clamp(28px,4vw,56px)">Five years, four teams</h2>
+
+      <div style="display:flex;flex-direction:column;gap:var(--space-4)">
+        <div data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:clamp(22px,2.6vw,36px);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(18px,3vw,44px)">
+          <div>
+            <div class="tag tag-accent" style="margin-bottom:12px">Oct 2025 – Present</div>
+            <h4 style="margin:0 0 4px;font-size:22px">Senior UI/UX Designer</h4>
+            <div style="font-size:14px;font-weight:600;opacity:.65">ZenTrades.AI · Pune, Maharashtra</div>
+          </div>
+          <ul style="margin:0;padding-left:20px;font-size:14.5px;line-height:1.6;opacity:.85;display:flex;flex-direction:column;gap:7px">
+            <li>End-to-end UX strategy for AI-powered CRM workflows, translating complex service operations into intuitive digital experiences.</li>
+            <li>Scalable product interfaces balancing automation, usability, accessibility and user control.</li>
+            <li>Reusable component libraries and interface standards across CRM modules; React-based design system collaboration.</li>
+            <li>GenAI-enhanced design workflows to accelerate ideation, prototyping and reviews.</li>
+          </ul>
+        </div>
+        <div data-reveal="1" data-delay="70" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:clamp(22px,2.6vw,36px);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(18px,3vw,44px)">
+          <div>
+            <div class="tag tag-accent-2" style="margin-bottom:12px">Apr 2022 – Sep 2025</div>
+            <h4 style="margin:0 0 4px;font-size:22px">Senior UX Designer</h4>
+            <div style="font-size:14px;font-weight:600;opacity:.65">Centricity Wealth Tech · Gurgaon, India</div>
+          </div>
+          <ul style="margin:0;padding-left:20px;font-size:14.5px;line-height:1.6;opacity:.85;display:flex;flex-direction:column;gap:7px">
+            <li>Led UX strategy and execution for enterprise WealthTech SaaS across web and mobile.</li>
+            <li>25+ user interviews and 23 usability studies; workflow efficiency up 30%, CSAT up 20%.</li>
+            <li>Structured onboarding ecosystem adopted across 5 SaaS launches — activation up 33%, support dependency down 18%.</li>
+            <li>Mentored junior designers; drove accessibility standards and design system adoption.</li>
+          </ul>
+        </div>
+        <div data-reveal="1" data-delay="140" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:clamp(22px,2.6vw,36px);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(18px,3vw,44px)">
+          <div>
+            <div class="tag tag-outline" style="margin-bottom:12px">May 2021 – Feb 2022</div>
+            <h4 style="margin:0 0 4px;font-size:22px">UX Designer</h4>
+            <div style="font-size:14px;font-weight:600;opacity:.65">Mr. CTO Nex X · Bangalore, India</div>
+          </div>
+          <ul style="margin:0;padding-left:20px;font-size:14.5px;line-height:1.6;opacity:.85;display:flex;flex-direction:column;gap:7px">
+            <li>Production-ready interfaces emphasizing accessibility, visual hierarchy and mobile-first usability.</li>
+            <li>Reimagined first-time user journeys — 30% uplift in early-stage engagement.</li>
+            <li>Standardized UX workflows across 4 product teams; iteration cycles 28% shorter.</li>
+          </ul>
+        </div>
+        <div data-reveal="1" data-delay="210" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);background:var(--color-bg);border-radius:var(--radius-lg);padding:clamp(22px,2.6vw,36px);display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.3fr);gap:clamp(18px,3vw,44px)">
+          <div>
+            <div class="tag tag-outline" style="margin-bottom:12px">Jan 2021 – Mar 2021</div>
+            <h4 style="margin:0 0 4px;font-size:22px">Digital Marketing &amp; Graphics Designer</h4>
+            <div style="font-size:14px;font-weight:600;opacity:.65">Yantromintra · Bangalore, India</div>
+          </div>
+          <ul style="margin:0;padding-left:20px;font-size:14.5px;line-height:1.6;opacity:.85;display:flex;flex-direction:column;gap:7px">
+            <li>50+ marketing visuals, brand assets and campaign creatives.</li>
+            <li>Campaign engagement up 35%; turnaround time down 20% through organized asset libraries.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-reveal="1" style="opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);margin-top:var(--space-8);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(16px,2vw,26px)">
+        <div style="background:var(--color-accent-700);color:var(--color-accent-100);border-radius:var(--radius-lg);padding:var(--space-6)">
+          <h5 style="margin:0 0 var(--space-3);font-size:17px">Key achievements</h5>
+          <ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.6;opacity:.9;display:flex;flex-direction:column;gap:6px">
+            <li>Onboarding activation +33% across 5 SaaS launches</li>
+            <li>Onboarding support requests −18%</li>
+            <li>CSAT +20%</li>
+            <li>1st Place — Best UI Design Hackathon, Centricity</li>
+          </ul>
+        </div>
+        <div style="background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6)">
+          <h5 style="margin:0 0 var(--space-2);font-size:17px">Education</h5>
+          <p style="font-size:14px;opacity:.75;margin:0">Bachelor of Design (B.Des)<br>Uttar Pradesh Institute of Design, Noida — Jun 2020</p>
+        </div>
+        <div style="background:var(--color-bg);border-radius:var(--radius-lg);padding:var(--space-6)">
+          <h5 style="margin:0 0 var(--space-2);font-size:17px">Certifications</h5>
+          <p style="font-size:14px;opacity:.75;margin:0">AI-Enhanced Design &amp; GenAI for UI/UX (2024) · Advanced UX Design and Research, Udemy (2024) · Design Thinking &amp; Agile Methodologies (2022)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" style="background:var(--color-accent-900);color:var(--color-accent-100);border-radius:var(--radius-lg) var(--radius-lg) 0 0;margin-top:0">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(60px,9vw,130px) clamp(20px,5vw,72px) clamp(32px,4vw,56px)">
+      <h6 style="color:var(--color-accent-300);margin-bottom:var(--space-4)">Contact</h6>
+      <h2 style="font-size:clamp(44px,9vw,124px);line-height:0.95;letter-spacing:-0.03em;margin:0 0 var(--space-6)">Let's talk</h2>
+      <p style="font-size:17px;max-width:44ch;opacity:.8;margin:0 0 var(--space-8)">Aditi Tiwari — Senior Product Designer. Open to international Senior Product Designer / Lead / UX Designer roles — on-site, hybrid, or remote, with relocation.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--space-6);padding-bottom:var(--space-8)">
+        <a href="mailto:taditi555@gmail.com" style="color:var(--color-accent-100);text-decoration:none;border-top:1px solid color-mix(in srgb, #fff 22%, transparent);padding-top:var(--space-3)" style-hover="color:var(--color-accent-300)"><div style="font-size:12px;opacity:.6;margin-bottom:6px">Email</div><div style="font-family:var(--font-heading);font-size:19px">taditi555@gmail.com</div></a>
+        <a href="tel:+918840898125" style="color:var(--color-accent-100);text-decoration:none;border-top:1px solid color-mix(in srgb, #fff 22%, transparent);padding-top:var(--space-3)" style-hover="color:var(--color-accent-300)"><div style="font-size:12px;opacity:.6;margin-bottom:6px">Phone</div><div style="font-family:var(--font-heading);font-size:19px">+91 88408 98125</div></a>
+        <a href="https://www.linkedin.com/in/aditi-tiwari-39384918a/" target="_blank" rel="noopener" style="color:var(--color-accent-100);text-decoration:none;border-top:1px solid color-mix(in srgb, #fff 22%, transparent);padding-top:var(--space-3)" style-hover="color:var(--color-accent-300)"><div style="font-size:12px;opacity:.6;margin-bottom:6px">LinkedIn</div><div style="font-family:var(--font-heading);font-size:19px">in/aditi-tiwari</div></a>
+        <a href="https://www.behance.net/adititiwar2841" target="_blank" rel="noopener" style="color:var(--color-accent-100);text-decoration:none;border-top:1px solid color-mix(in srgb, #fff 22%, transparent);padding-top:var(--space-3)" style-hover="color:var(--color-accent-300)"><div style="font-size:12px;opacity:.6;margin-bottom:6px">Behance</div><div style="font-family:var(--font-heading);font-size:19px">behance.net/adititiwar2841</div></a>
+      </div>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);font-size:13px;opacity:.55;border-top:1px solid color-mix(in srgb, #fff 16%, transparent);padding-top:var(--space-4)">
+        <span>Mandi, Himachal Pradesh, India · Open to relocation &amp; visa sponsorship</span>
+        <span>© 2026 Aditi Tiwari</span>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.progressRef = React.createRef();
+  }
+  renderVals() { return { progressRef: this.progressRef }; }
+
+  componentDidMount() {
+    const root = this.progressRef.current ? this.progressRef.current.parentNode : document;
+
+    const reveal = (el) => {
+      const d = parseInt(el.getAttribute('data-delay') || '0', 10);
+      el.style.transitionDelay = d + 'ms';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    };
+    const counted = new WeakSet();
+    const count = (el) => {
+      if (counted.has(el)) return;
+      counted.add(el);
+      const target = parseFloat(el.getAttribute('data-count')) || 0;
+      const t0 = performance.now(), dur = 1200;
+      const tick = (now) => {
+        const p = Math.min(1, (now - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * e);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        reveal(en.target);
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+
+    const seen = new WeakSet();
+    const scan = () => {
+      document.querySelectorAll('[data-reveal]').forEach((el) => {
+        if (seen.has(el)) return;
+        seen.add(el);
+        io.observe(el);
+      });
+      document.querySelectorAll('[data-count]').forEach(count);
+    };
+    scan();
+    this._scan = setInterval(scan, 250);
+    this._stop = setTimeout(() => clearInterval(this._scan), 6000);
+    this._t = setTimeout(() => {
+      document.querySelectorAll('[data-reveal]').forEach(reveal);
+      document.querySelectorAll('[data-count]').forEach(count);
+    }, 6500);
+
+    const parallax = Array.from(document.querySelectorAll('[data-parallax]'));
+    let raf = null;
+    this._onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = null;
+        const y = window.scrollY || 0;
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        if (this.progressRef.current) {
+          this.progressRef.current.style.transform = 'scaleX(' + (h > 0 ? Math.min(1, y / h) : 0) + ')';
+        }
+        parallax.forEach((el) => {
+          const r = parseFloat(el.getAttribute('data-parallax')) || 0;
+          el.style.transform = 'translate3d(0,' + (y * r).toFixed(1) + 'px,0)';
+        });
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    this._io = io;
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._t) clearTimeout(this._t);
+    if (this._stop) clearTimeout(this._stop);
+    if (this._scan) clearInterval(this._scan);
+    window.removeEventListener('scroll', this._onScroll);
+  }
+}
+</script>
+</body>
+</html>
